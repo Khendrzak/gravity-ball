@@ -9,7 +9,7 @@ void setup(){
   locx=width/2;
   locy=sz;
   sz=50;
-  velx=0;
+  velx=5;
   vely=0;
   gravity=1;
   accx=0;
@@ -26,7 +26,13 @@ void draw(){
   
   if(locy>height){
     locy=height-sz/2;
-    vely*=-1;
+    vely*=-.9;
+  }
+  if(locx + sz/2 >width){
+   velx=abs(velx) *-.9;
+  }
+  if(locx - sz/2<0){
+   velx=abs(velx) *.9;
   }
   
 }
