@@ -17,12 +17,14 @@ void setup(){
 
 void draw(){
   //background(0);
-  ellipse(locx,locy,sz,sz);
+ 
   velx+=accx;
   vely+=gravity;
     
   locy+=vely;
   locx+=velx;
+  
+  ellipse(locx,locy,sz,sz);
   
   if(locy>height){
     locy=height-sz/2;
